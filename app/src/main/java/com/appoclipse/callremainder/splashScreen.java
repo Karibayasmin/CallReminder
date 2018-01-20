@@ -35,12 +35,9 @@ public class splashScreen extends AppCompatActivity {
         appname = findViewById(R.id.appname);
         applogo = findViewById(R.id.logo);
         tag = findViewById(R.id.tag);
-
-        appname.animate().alpha(0f).setDuration(500);
-        appname.animate().translationXBy(-1000f).setDuration(3000);
-        applogo.animate().alpha(0f).setDuration(500);
-        applogo.animate().translationXBy(1000f).setDuration(3000);
-        tag.animate().alpha(1f).setDuration(3000);
+        appname.animate().alpha(0f).setDuration(1000);
+        applogo.animate().alpha(0f).setDuration(1000);
+        tag.animate().alpha(1f).setDuration(2000);
 
         //Switching to Main Activity
         Handler handler = new Handler();

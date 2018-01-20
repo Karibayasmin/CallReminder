@@ -1,68 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.appoclipse.callremainder.CallRemainderActivity">
 
-
-    <TextView
-        android:id="@+id/appname"
-        android:layout_width="0dp"
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/tag"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/bangers"
-        android:padding="-50dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:columnCount="2"
+        android:rowCount="2">
 
-    <TextView
-        android:id="@+id/tag"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/appname"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_toEndOf="@+id/imageView2"
-        android:fontFamily="@font/playball"
-        android:text="@string/tag_line"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appname"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:src="@drawable/logo" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/gridLayout"
+            android:layout_alignTop="@+id/gridLayout"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:fontFamily="@font/federant"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_column="01"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:fontFamily="@font/playball"
+            android:text="@string/tag_line"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp" />
+
+    </GridLayout>
+</RelativeLayout>
