@@ -19,7 +19,7 @@ public class PhoneStateReceiver extends  BroadcastReceiver {
             System.out.println("Receiver start");
             String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
             String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-            String misscallNumber = intent.getStringExtra(TelephonyManager.EXTRA_STATE_IDLE);
+           // String misscallNumber = intent.getStringExtra(TelephonyManager.EXTRA_STATE_IDLE);
 
             if(state.equals(TelephonyManager.EXTRA_STATE_RINGING)){
                 ring =true;
