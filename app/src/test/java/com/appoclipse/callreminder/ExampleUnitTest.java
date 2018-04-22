@@ -1,4 +1,4 @@
-package com.appoclipse.callremainder;
+package com.appoclipse.callreminder;
 
 import org.junit.Test;
 
