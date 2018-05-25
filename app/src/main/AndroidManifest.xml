@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.appoclipse.callremainder">
+    package="com.appoclipse.callreminder">
 
 
 
@@ -12,18 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".splashScreen">
+        <activity android:name="com.appoclipse.callreminder.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CallRemainderActivity">
+        <activity android:name="com.appoclipse.callreminder.CallReminderActivity">
 
         </activity>
 
-        <receiver android:name=".PhoneStateReceiver" android:enabled="true">
+        <receiver android:name="com.appoclipse.callreminder.PhoneStateReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
